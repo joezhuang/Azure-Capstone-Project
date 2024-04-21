@@ -51,11 +51,14 @@ $secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
 $secrets = $secret->getSecrets();
 
 // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-$host  = $secret->getSecret('kv-db1-host');
-$username  = $secret->getSecret('kv-db1-username');
-$password = $secret->getSecret('kv-db1-password');
-$db_name  = $secret->getSecret('kv-db1-dbname');
-
+// $host  = $secret->getSecret('kv-db1-host');
+// $username  = $secret->getSecret('kv-db1-username');
+// $password = $secret->getSecret('kv-db1-password');
+// $db_name  = $secret->getSecret('kv-db1-dbname');
+$host  = '10.0.100.4';
+$username  = 'localadmin';
+$password = 'Joezhuang.au123!';
+$db_name  = 'deltatrack_data';
 // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
 $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 
