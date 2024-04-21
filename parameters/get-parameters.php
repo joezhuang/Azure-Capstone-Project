@@ -60,7 +60,7 @@ $username  = 'localadmin';
 $password = 'Joezhuang.au123!';
 $db_name  = 'deltatrack_data';
 // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
-$sslcert    = 'ssl/DigiCertGlobalRootG2.crt.pem';
+$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 
 
 
