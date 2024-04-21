@@ -47,8 +47,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 // STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-$secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
-$secrets = $secret->getSecrets();
+// $secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
+// $secrets = $secret->getSecrets();
 
 // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
 // $host  = $secret->getSecret('kv-db1-host');
