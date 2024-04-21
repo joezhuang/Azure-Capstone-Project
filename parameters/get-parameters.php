@@ -55,7 +55,7 @@ require __DIR__ . '/vendor/autoload.php';
 // $username  = $secret->getSecret('kv-db1-username');
 // $password = $secret->getSecret('kv-db1-password');
 // $db_name  = $secret->getSecret('kv-db1-dbname');
-$host  = 'deltatrack-db.mysql.database.azure.com';
+$host  = 'deltatrack-db';
 $username  = 'localadmin';
 $password = 'Joezhuang.au123!';
 $db_name  = 'deltatrack_data';
