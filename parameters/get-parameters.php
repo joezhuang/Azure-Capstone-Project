@@ -46,15 +46,17 @@ require __DIR__ . '/vendor/autoload.php';
 // *******************PARAMETER SECTION *************************** //
 
 
-STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
+//STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
 $secret = new AzKeyVault\Secret('https://deltatrack-kvault.vault.azure.net/');
 $secrets = $secret->getSecrets();
 
-STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
+//STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
 $host  = $secret->getSecret('kv-db1-host');
 $username  = $secret->getSecret('kv-db1-username');
 $password = $secret->getSecret('kv-db1-password');
 $db_name  = $secret->getSecret('kv-db1-dbname');
+
+// // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
 $sslcert = $secret->getSecret('kv-db1-sslcert');
 
 
