@@ -46,23 +46,23 @@ require __DIR__ . '/vendor/autoload.php';
 // *******************PARAMETER SECTION *************************** //
 
 
-//STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-$secret = new AzKeyVault\Secret('https://deltatrack-kvault.vault.azure.net/');
-$secrets = $secret->getSecrets();
+// //STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
+// $secret = new AzKeyVault\Secret('https://deltatrack-kvault1.vault.azure.net/');
+// $secrets = $secret->getSecrets();
 
-//STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-$host  = $secret->getSecret('kv-db1-host');
-$username  = $secret->getSecret('kv-db1-username');
-$password = $secret->getSecret('kv-db1-password');
-$db_name  = $secret->getSecret('kv-db1-dbname');
+// //STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
+// $host  = $secret->getSecret('kv-db1-host');
+// $username  = $secret->getSecret('kv-db1-username');
+// $password = $secret->getSecret('kv-db1-password');
+// $db_name  = $secret->getSecret('kv-db1-dbname');
 
-// // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
-$sslcert = $secret->getSecret('kv-db1-sslcert');
+// // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
+// $sslcert = $secret->getSecret('kv-db1-sslcert');
 
 
-// $host  = 'deltatrack-db.mysql.database.azure.com';
+// $host  = 'deltatrack-db1.mysql.database.azure.com';
 // $username  = 'localadmin';
-// $password = 'Joezhuang.au123!';
+// $password = 'Jozhuang.au123!';
 // $db_name  = 'deltatrack_data';
 // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
 // $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
@@ -86,19 +86,19 @@ $sslcert = $secret->getSecret('kv-db1-sslcert');
  * 
  */
 
- /* <**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ****** 
+
 
 # <?php
 
 // Configuration for database connection
 
 # REMOTE DECLARATION
-$host       = getenv('DB_HOST');
-$username   = getenv('DB_USERNAME');
-$password   = getenv('DB_PASSWORD');
-$db_name     = getenv('DB_DATABASE');
-$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
-#$sslcert   = getenv('DB_SSLCERT');
+$host       = getenv('kv-db1-host');
+$username   = getenv('kv-db1-username');
+$password   = getenv('kv-db1-password');
+$db_name     = getenv('kv-db1-dbname');
+// $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
+$sslcert   = getenv('kv-db1-sslcert');
 
 # LOCAL DECLARATION
 #$host       = 'SQLdbENDPOINT';
@@ -113,6 +113,6 @@ $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$testpemcontent = "$var_str";
 #file_put_contents('testcertsb.pem', $testpemcontent);
 #$sslcert    = "testcertsb.pem";
-?>
+// ?>
 
-**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ******   */   
+
