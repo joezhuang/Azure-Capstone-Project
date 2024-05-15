@@ -86,7 +86,7 @@ require __DIR__ . '/vendor/autoload.php';
  * 
  */
 
-//  /* <**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ****** 
+
 
 # <?php
 
@@ -113,6 +113,3 @@ $sslcert   = getenv('DB_SSLCERT');
 #$testpemcontent = "$var_str";
 #file_put_contents('testcertsb.pem', $testpemcontent);
 #$sslcert    = "testcertsb.pem";
-?>
-
-********** DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION ****** */
