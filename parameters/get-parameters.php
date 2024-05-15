@@ -9,7 +9,7 @@
  * # ++++++++++
  */
 
- /**
+/**
  * Install PHP Composer on Ubuntu
  * https://linuxhint.com/install-and-use-php-composer-ubuntu-22-04/
  * Install the required package - eg: below - wapacro/az-keyvault-php
@@ -19,7 +19,7 @@
  * 
  */
 
- /**
+/**
  * Azure Key Vault Library - for PHP on VM or Azure Webapp
  * This library allows easy integration of Azure Key Vault in PHP applications.
  * https://github.com/wapacro/az-keyvault-php.git
@@ -47,17 +47,17 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 // //STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-$secret = new AzKeyVault\Secret('https://deltatrack-kvault1.vault.azure.net/');
-// $secrets = $secret->getSecrets();
+// $secret = new AzKeyVault\Secret('https://deltatrack-kvault1.vault.azure.net/');
+// // $secrets = $secret->getSecrets();
 
-//STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-$host  = $secret->getSecret('kv-db1-host');
-$username  = $secret->getSecret('kv-db1-username');
-$password = $secret->getSecret('kv-db1-password');
-$db_name  = $secret->getSecret('kv-db1-dbname');
+// //STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
+// $host  = $secret->getSecret('kv-db1-host');
+// $username  = $secret->getSecret('kv-db1-username');
+// $password = $secret->getSecret('kv-db1-password');
+// $db_name  = $secret->getSecret('kv-db1-dbname');
 
-// // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
-$sslcert = $secret->getSecret('kv-db1-sslcert');
+// // // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
+// $sslcert = $secret->getSecret('kv-db1-sslcert');
 
 
 // $host  = 'deltatrack-db1.mysql.database.azure.com';
@@ -78,7 +78,7 @@ $sslcert = $secret->getSecret('kv-db1-sslcert');
 # ++++++++++
 # SECTION 2
 # ++++++++++
-    
+
 /**
  * #################################################################################################################################
  * BELOW CONFIGURATION ( SECTION 2 ) IS REQUIRED IF STUDENT RUN  PHP APP  ON AZURE WEB APP ( APP SERVICE PLAN ) Instead of as a VM
@@ -86,7 +86,7 @@ $sslcert = $secret->getSecret('kv-db1-sslcert');
  * 
  */
 
- /* <**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ****** 
+//  /* <**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ****** 
 
 # <?php
 
@@ -97,8 +97,8 @@ $host       = getenv('DB_HOST');
 $username   = getenv('DB_USERNAME');
 $password   = getenv('DB_PASSWORD');
 $db_name     = getenv('DB_DATABASE');
-$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
-#$sslcert   = getenv('DB_SSLCERT');
+// $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
+$sslcert   = getenv('DB_SSLCERT');
 
 # LOCAL DECLARATION
 #$host       = 'SQLdbENDPOINT';
@@ -115,4 +115,4 @@ $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$sslcert    = "testcertsb.pem";
 ?>
 
-**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ******   */   
+********** DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION ****** */
